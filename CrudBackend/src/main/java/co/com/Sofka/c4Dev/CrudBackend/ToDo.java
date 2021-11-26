@@ -11,12 +11,7 @@ public class ToDo {
     @GeneratedValue
     private Long id;
     private String nombre;
-    private Boolean isCompleted;public ToDo(Long id, String nombre, Boolean isCompleted) {
-        this.id = id;
-        this.nombre = nombre;
-        this.isCompleted = isCompleted;
-    }
-
+    private Boolean isCompleted;
 
 
     public Long getId() {

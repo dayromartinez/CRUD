@@ -3,6 +3,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 public class ToDoController {
 
     @Autowired
@@ -23,7 +24,7 @@ public class ToDoController {
         return service.save(todo);
     }
 
-    @PutMapping(value = "api/todo/{id}")
+    @PutMapping(value = "api/todo")
     public ToDo update(@RequestBody ToDo todo){
         if(todo.getId() != null){
             return service.save(todo);
