@@ -64,10 +64,10 @@ const Form = () => {
       formRef.current.reset();
     });
   }
-  console.log(item.name);
+  console.log(item.nombre);
   return (
     <form ref={formRef}> 
-      <input type="text" name="name" defaultValue={item.name} onChange={(event) => {
+      <input type="text" name="name" defaultValue={item.nombre} onChange={(event) => {
         setState({...state, nombre: event.target.value})
       }}/>
       {item.id === undefined ? (<button onClick={onAdd}>Agregar</button>) : (<button onClick={onEdit}>Editar</button>)}
